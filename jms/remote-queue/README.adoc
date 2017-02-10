@@ -19,3 +19,10 @@ dans jboss-cli :
 
 /subsystem=messaging-activemq/server=default/pooled-connection-factory=remote-artemis:add(connectors=[remote-artemis], entries=[java:/jms/remoteCF])
 ----
+
+=== Config pour le connector http
+[code]
+----
+<connection-factory name="remote-artemis_rcv" entries="java:/global/jms/remotequeueRCV" connectors="remote-artemis"/>
+<connection-factory name="remote-artemis_snd" entries="java:/global/jms/remotequeueSND" connectors="remote-artemis"/>
+----

@@ -9,7 +9,8 @@ import javax.ws.rs.core.Response;
 @Path("publish")
 public class PublishResource {
   @Inject
-  @JMSConnectionFactory(value="java:/global/jms/remotequeue")
+//  @JMSConnectionFactory(value="java:/global/jms/remotequeue")
+  @JMSConnectionFactory(value="java:/global/jms/remotequeueSND")
   JMSContext context;
   
   @POST
